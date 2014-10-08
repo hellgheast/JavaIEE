@@ -22,20 +22,18 @@ public class Main
 
 	int arg_count;
 	String[] name;
+	//J'ajoute des commentaires dans mon code
 	
 	public static void main(String[] args) 
 	{
-	  int arg_count;
-	  String[] name= new String[args.length];
-	
-	  arg_count = args.length;
+	  String[] name= new String[args.length];//On crée un tableau d'une taille dynamique
 	  
       for(int i = 0; i<args.length;i++)
       {
     	 name[i] = args[i]; 
       }
       
-      System.out.println(PrintString(args));
+      System.out.println("Nom Fourni :"+PrintString(args));
       
       for(int i = 0; i<args.length;i++)
       {
@@ -50,7 +48,7 @@ public class Main
 
       }
       
-      System.out.println(PrintString(name));
+      System.out.println("Nom Corrigé :"+PrintString(name));
       
 	}
 
@@ -60,9 +58,12 @@ public class Main
 	private static String properCapitalize(String elem) 
 	{
 	  char temp;
-	  String correct;
-	  temp = Character.toUpperCase(elem.charAt(0));
-	  correct = Character.toString(temp) + elem.substring(1, elem.length());
+	  String correct,s_temp;
+	  
+	  
+	  temp = Character.toUpperCase(elem.charAt(0)); //Conversion de la lettre en Majuscule
+	  s_temp = elem.substring(1, elem.length());	//Découpage de la Châine
+	  correct = Character.toString(temp) + s_temp.toLowerCase(); //Concaténation
 	  
 	  return correct;
 	}
@@ -81,7 +82,8 @@ public class Main
 	      res += array[i];
 	    }
 	  }
-	return res;
+	  
+	  return res;
 	}
 	
 
