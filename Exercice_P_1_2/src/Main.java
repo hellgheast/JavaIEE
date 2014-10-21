@@ -37,14 +37,7 @@ public class Main
       
       for(int i = 0; i<args.length;i++)
       {
-    	 if(i==0)
-         {
-    	   name[i] = properCapitalize(name[i]);
-    	 }
-    	 if(i== args.length-1)
-    	 {
     	  name[i] = properCapitalize(name[i]);
-    	 }
 
       }
       
@@ -59,7 +52,18 @@ public class Main
 	{
 	  char temp;
 	  String correct,s_temp;
+	  String[] particulars = {"de", "du", "d'", "le", "la", "l'", "von", "der", "die", "das"};
 	  
+	  s_temp=elem.toLowerCase();
+	  System.out.println(s_temp);
+	  
+	  for(int i = 0;i<particulars.length;i++)
+	  {
+		  if (s_temp.equals(particulars[i]))
+		  {
+			  return s_temp;
+		  }
+	  }
 	  
 	  temp = Character.toUpperCase(elem.charAt(0)); //Conversion de la lettre en Majuscule
 	  s_temp = elem.substring(1, elem.length());	//Découpage de la Châine
