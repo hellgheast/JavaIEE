@@ -14,7 +14,6 @@ Modification : Version initiale
 *********************************************************************/
 
 package com.hearc.hellgheast;
-import java.util.Date;
 
 public class StopWatch 
 {
